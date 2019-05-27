@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="hanxinhu&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      人人都是架构师 读书笔记 | Hanxinhu&#39;Blog
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    <script src="/js/qrious.js"></script>
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png">
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Hanxinhu'Blog</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>人人都是架构师 读书笔记</h2>
+  <p class="post-date">2019-05-27</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h1 id="人人都是架构师-读书笔记"><a href="#人人都是架构师-读书笔记" class="headerlink" title="人人都是架构师 读书笔记"></a>人人都是架构师 读书笔记</h1><p>#人人都是架构师</p>
+<p>目标 高性能 高可用 易扩展 可伸缩 相对安全</p>
+<p>单机架构 机群架构 分布式架构<br>外围系统和存储系统 关系型数据库的分库分表改造 从本地缓存过渡到分布式缓存</p>
+<p>任何技术的初衷都是为了更好的服务业务 一旦脱离业务 技术必然会失去原有的价值和意义</p>
+<p>单机系统<br>文件服务器、web服务器、数据库全都在一个物理服务器上</p>
+<ul>
+<li>独立部署 避免不同的系统之间相互争夺共享资源</li>
+<li>Web服务器集群 实现可伸缩性</li>
+<li>部署分布式缓存系统 使得查询尽可能命中在缓存中</li>
+<li>数据库实施读写分离 实现HA high availability 架构</li>
+</ul>
+<p>集群架构<br>提升业务系统的并行处理能力、降低单机系统负载、以便支撑更多的用户访问操作。</p>
+<p>一个基本共识<br>当一台服务器的处理能力接近或者已超出其容量上限时，不要企图用一台更强劲的服务器，通常采用集群技术，通过增加新的服务器来分散并发访问量</p>
+<p>无状态的Web节点可以通过Nginx来实现负载均衡调度 </p>
+<p>集群环境中Web节点的数量越多 并行处理能力就越强，哪怕某些节点宕机，也不会使得整体不可用。<br>分布式缓存 数据库</p>
+<p>利用CDN（content deliver network)加速系统响应<br>业务垂直化、降低耦合、分而治之的管理</p>
+<p>以业务功能为维度拆分出多个子系统，规划和体现出每个字系统的职责，降低业务耦合，提升容错率</p>
+<p>服务化架构 SOA </p>
+<h2 id="系统服务化需求"><a href="#系统服务化需求" class="headerlink" title="系统服务化需求"></a>系统服务化需求</h2><p>RPC remote procedure call 远程过程调用<br>三个步骤</p>
+<ul>
+<li>底层的网络通信协议处理</li>
+<li>解决寻址问题</li>
+<li>请求/响应过程中参数的序列化和反序列化工作<br>RPC封装上面的底层处理细节</li>
+</ul>
+<p>Dubbo<br><img src="https://camo.githubusercontent.com/660e543510891254fa0ca6138af3350458aa0582/687474703a2f2f647562626f2e6170616368652e6f72672f696d672f6172636869746563747572652e706e67" alt></p>
+<p>Provider先向注册中心注册指定的服务，这样作为服务调用方的Consumer在启动后便可以向注册中心订阅目标服务，然后在本地根据负载均衡算法从地址列表中选择其中一个服务节点进行RPC调用<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.apache.dubbo.samples.api;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">GreetingService</span> </span>&#123;</span><br><span class="line">    <span class="function">String <span class="title">sayHello</span><span class="params">(String name)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">package</span> org.apache.dubbo.samples.provider;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> org.apache.dubbo.samples.api.GreetingService;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GreetingServiceImpl</span> <span class="keyword">implements</span> <span class="title">GreetingService</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">sayHello</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Hello "</span> + name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">package</span> org.apache.dubbo.demo.provider;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.dubbo.config.ApplicationConfig;</span><br><span class="line"><span class="keyword">import</span> org.apache.dubbo.config.RegistryConfig;</span><br><span class="line"><span class="keyword">import</span> org.apache.dubbo.config.ServiceConfig;</span><br><span class="line"><span class="keyword">import</span> org.apache.dubbo.samples.api.GreetingService;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        ServiceConfig&lt;GreetingService&gt; serviceConfig = <span class="keyword">new</span> ServiceConfig&lt;GreetingService&gt;();</span><br><span class="line">        serviceConfig.setApplication(<span class="keyword">new</span> ApplicationConfig(<span class="string">"first-dubbo-provider"</span>));</span><br><span class="line">        serviceConfig.setRegistry(<span class="keyword">new</span> RegistryConfig(<span class="string">"multicast://224.5.6.7:1234"</span>));</span><br><span class="line">        serviceConfig.setInterface(GreetingService.class);</span><br><span class="line">        serviceConfig.setRef(<span class="keyword">new</span> GreetingServiceImpl());</span><br><span class="line">        serviceConfig.export();</span><br><span class="line">        System.in.read();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">package</span> org.apache.dubbo.demo.consumer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.dubbo.config.ApplicationConfig;</span><br><span class="line"><span class="keyword">import</span> org.apache.dubbo.config.ReferenceConfig;</span><br><span class="line"><span class="keyword">import</span> org.apache.dubbo.config.RegistryConfig;</span><br><span class="line"><span class="keyword">import</span> org.apache.dubbo.samples.api.GreetingService;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ReferenceConfig&lt;GreetingService&gt; referenceConfig = <span class="keyword">new</span> ReferenceConfig&lt;GreetingService&gt;();</span><br><span class="line">        referenceConfig.setApplication(<span class="keyword">new</span> ApplicationConfig(<span class="string">"first-dubbo-consumer"</span>));</span><br><span class="line">        referenceConfig.setRegistry(<span class="keyword">new</span> RegistryConfig(<span class="string">"multicast://224.5.6.7:1234"</span>));</span><br><span class="line">        referenceConfig.setInterface(GreetingService.class);</span><br><span class="line">        GreetingService greetingService = referenceConfig.get();</span><br><span class="line">        System.out.println(greetingService.sayHello(<span class="string">"world"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>failover 调用失败 重试其他节点 通常用于读操作<br>Failfast  只发起一次调用，失败立即报错，通常用于非幂等性的写操作</p>
+<blockquote>
+<p>什么是幂等性<br>HTTP/1.1中对幂等性的定义是：一次和多次请求某一个资源<strong>对于资源本身</strong>应该具有同样的结果（网络超时等问题除外）。也就是说，<strong>其任意多次执行对资源本身所产生的影响均与一次执行的影响相同</strong>。<br>Methods can also have the property of “idempotence” in that (aside from error or expiration issues) the side-effects of N &gt; 0 identical requests is the same as for a single request.</p>
+</blockquote>
+<p>Failsafe 失败安全，出现异常时直接忽略 用于写入审计日志等操作<br>Failback 失败自动恢复 后台记录失败请求，定时重发，通常用于消息通知操作<br>Forking 并行调用多个服务节点，成功1个即返回，通常用于实时性较高的读操作</p>
+<p>服务治理</p>
+<ul>
+<li>服务的动态注册与发现</li>
+<li>服务的扩容评级</li>
+<li>服务的升降级处理</li>
+</ul>
+<p>监控中心 更好地掌握服务的状态信息<br>引入注册中心的目的就是实现服务的动态注册和发现，服务将得到解脱，在客户端实现负载均衡和Failover将会大大降低对硬件负载均衡器的依赖。</p>
+<p>特殊情境下，可以对次要服务进行降级，牺牲部分功能保证系统的核心服务不受影响。</p>
+<p>难题 分布式事务<br>只要保证最终一致性，数据短暂不一致的窗口期也无妨<br>解决主要矛盾<br>JVM调优 吞吐量和低延迟相互矛盾<br>吞吐量有先，GC花费更长的暂停时间来执行内存回收。<br>反之，频繁地内存呢回收导致吞吐量下降。</p>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#读书笔记">
+    <span class="tag-code">读书笔记</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2019/05/27/hello-world/">
+        <span class="nav-arrow">← </span>
+        
+          Hello World
+        
+      </a>
+    
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- No Comment -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#人人都是架构师-读书笔记"><span class="toc-nav-text">人人都是架构师 读书笔记</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#系统服务化需求"><span class="toc-nav-text">系统服务化需求</span></a></li></ol></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://hanxinhu.github.io/2019/05/27/architecture/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>
