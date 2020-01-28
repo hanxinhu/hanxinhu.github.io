@@ -10,7 +10,7 @@
   
   <title>
     
-      Tags | Hanxinhu&#39;Blog
+      Hanxinhu&#39;Blog
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -143,77 +143,67 @@
 </header>
 
     <div id="article-banner">
-  <h2>Tags</h2>
-  <p class="post-date">标签检索</p>
+  <h2>Archives</h2>
+  <p class="post-date">文章归档</p>
 </div>
-<main class="app-body">
-  <div id="tag-cloud">
+<main class="app-body" id="archives">
+  
+  
+  
+    <section class="time-section">
+  <h1 class="section-year">
+    2020
+  </h1>
+  <div class="section-list">
     
-      <a class="tag2" data-name="tag-实习">实习</a>
     
-      <a class="tag0" data-name="tag-爬虫">爬虫</a>
-    
-      <a class="tag1" data-name="tag-读书笔记">读书笔记</a>
+      <div class="section-list-item">
+        <a href="/2020/01/28/Python-Selenium爬虫入门/" class="archive-title">Python + Selenium 爬虫入门</a>
+        <p class="archive-date">01-28</p>
+      </div>
     
   </div>
+</section>
   
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-实习">实习</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/2019/04/23/2019年春招实习经验“/">2019年春招实习经验</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/2019/11/10/2019年苏州微软实习经历/">2019年苏州微软实习经历</a>
-          </li>
-        </ul>
-        
-    </div>
+    <section class="time-section">
+  <h1 class="section-year">
+    2019
+  </h1>
+  <div class="section-list">
     
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-爬虫">爬虫</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/2020/01/28/Python-Selenium爬虫入门/">Python + Selenium 爬虫入门</a>
-          </li>
-        </ul>
-        
-    </div>
     
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-读书笔记">读书笔记</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/2019/05/27/architecture/">人人都是架构师 读书笔记</a>
-          </li>
-        </ul>
-        
-    </div>
+      <div class="section-list-item">
+        <a href="/2019/11/10/2019年苏州微软实习经历/" class="archive-title">2019年苏州微软实习经历</a>
+        <p class="archive-date">11-10</p>
+      </div>
     
+      <div class="section-list-item">
+        <a href="/2019/05/27/architecture/" class="archive-title">人人都是架构师 读书笔记</a>
+        <p class="archive-date">05-27</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/05/27/hello-world/" class="archive-title">Hello World</a>
+        <p class="archive-date">05-27</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/04/23/2019年春招实习经验“/" class="archive-title">2019年春招实习经验</a>
+        <p class="archive-date">04-23</p>
+      </div>
+    
+  </div>
+</section>
+  
 </main>
 
 <script>
   (function () {
-    var url = 'http://hanxinhu.github.io/tags/index.html'
-    $('#article-banner').geopattern(url)
-    $('.header').removeClass('fixed-header')
-
-    var tag = location.hash.replace('#', '')
-    if (tag) {
-      var tagId = "#tag-" + tag;
-      $("html, body").animate({
-        scrollTop: $(tagId).offset().top 
-      }, 400)
-    }
+    var url = 'http://hanxinhu.github.io/archives/2020/01/index.html';
+    $('#article-banner').geopattern(url);
+    $('.header').removeClass('fixed-header');
   })();
 </script>
-  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>
